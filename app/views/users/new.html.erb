@@ -1,0 +1,20 @@
+<h1>Add New Employee</h1>
+<%= form_for @user, url: users_path do |f| %> 
+<p>
+    <%= f.label :name%>
+    <br>
+    <%= f.text_field(:name, {:class => 'form-control'})%>
+</p>
+<%= f.fields_for :account, Account.new do |form| %>
+<p>
+    <%= form.label :account_number%>
+    <br>
+    <%= form.text_field(:accNumber, {:class => 'form-control'})%>
+</p>
+<%end %>
+<p>
+    <%= f.submit({:class => 'btn btn-dark'}) %>
+    
+</p>
+
+<%end%>

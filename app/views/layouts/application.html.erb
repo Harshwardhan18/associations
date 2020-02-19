@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TestAssociation</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag 'https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css' %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">ASSOCIATIONS</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+    <ul class="navbar-nav nav">
+      <li class="nav-item">
+        <%= link_to "Home", authors_path  %>
+      </li>
+    <li class="nav-item navbar-right ml-4">
+        <%= link_to "Create Author", new_author_path %>
+    </li>
+    <li class="nav-item navbar-right ml-4">
+        <%= link_to "Create Employee", new_user_path %>
+    </li>
+    </ul>
+
+  </div>
+</nav>
+<div class= 'container'>
+    <%= yield %>
+</div> 
+  </body>
+</html>
