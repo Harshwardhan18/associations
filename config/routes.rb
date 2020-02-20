@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-  root 'authors#index'
+  root 'companies#index'
 
   resources :authors, except: [:edit, :update] do
     resources :books, except: [:edit, :update]
@@ -11,4 +11,11 @@ Rails.application.routes.draw do
   end
 
   resources :physicians, :appointment
+
+  resources :companies do
+    resources :notes, module: :companies
+  end
+  resources :employees do
+    resources :notes, module: :employees
+  end
 end
