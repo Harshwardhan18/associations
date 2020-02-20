@@ -1,0 +1,22 @@
+<h1>Physicians</h1>
+<table class='table'>
+  <thead>
+    <tr>
+      <th>Doctor</th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @physicians.each do |physician| %>
+      <tr>
+        <td><%= physician.name %></td>
+        <td><%= link_to 'Show', physician %></td>
+        <td><%= link_to 'Destroy', physician, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<br>
+<br>
+<%= link_to 'Add Physician', new_physician_path %>

@@ -1,0 +1,8 @@
+<h1><%= @physician.name %></h1>
+<% @physician.appointments.each do |app|  %>
+<div class="row">
+    <ul>
+        <li>Appointment: <%= app.id %>||<%= link_to 'Show', app %></li>
+    </ul>
+</div>
+<% end %>

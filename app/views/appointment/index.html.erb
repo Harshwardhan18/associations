@@ -1,1 +1,30 @@
 <h1>Appointments</h1>
+<table class='table'>
+  <thead>
+    <tr>
+      <th>Appointment Id</th>
+      <th>Doctor</th>
+      <th>Patient</th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @appointments.each do |appointment| %>
+      <tr>
+        <td><%= appointment.id %></td>
+        <td><%= appointment.physician.name %></td>
+        <td><%= appointment.patient.name %></td>
+        <td><%= link_to 'Show', appointment %></td>
+        <td><%= link_to 'Destroy', appointment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Appointment', new_appointment_path %>
+<br>
+<br>
+<%= link_to 'Physician', physicians_path %>

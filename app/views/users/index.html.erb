@@ -1,0 +1,26 @@
+<h1>Customers</h1>
+<table class='table'>
+  <thead>
+    <tr>
+      <th>Customer Name</th>
+      <th>Account Number</th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.name %></td>
+        <td><%= user.account&.accNumber %></td>
+        <td><%= link_to 'Show', user_path(user) %></td>
+        <td><%= link_to 'Delete', user_path(user), method: :delete, data: {confirm: 'Are you sure?'}, :class => 'btn btn-danger' %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Create User', new_user_path %>
+
