@@ -1,0 +1,12 @@
+<h1>Add Physician</h1>
+<%= form_for :physician, url: physicians_path do |f| %> 
+<p>
+    <%= f.label :name%>
+    <br>
+    <%= f.text_field(:name, {:class => 'form-control'})%>
+</p>
+<p>
+    <%= f.submit({:class => 'btn btn-dark'}) %>
+    
+</p>
+<%end%>

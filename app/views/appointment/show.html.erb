@@ -1,0 +1,14 @@
+<h1><%=@appointment.id %></h1>
+<hr>
+<br>
+<%= link_to 'Delete', appointment_path(@appointment), method: :delete, data: {confirm: 'Are you sure?'}, :class => 'btn btn-danger' %> 
+<hr>
+    
+        <div class="well">
+        <Strong>Appointment is set!!!!</Strong> <br>
+        Physician: <Strong><%= @appointment.physician.name %></Strong> <br>
+        Patient: <Strong><%= @appointment.patient.name %></Strong>
+        </div>
+    
+<hr>
+    

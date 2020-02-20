@@ -9,4 +9,6 @@ Rails.application.routes.draw do
   resources :users, except: [:edit, :update] do
     resources :accounts, except: [:edit, :update]
   end
+
+  resources :physicians, :appointment
 end
