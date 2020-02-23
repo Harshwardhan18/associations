@@ -1,0 +1,64 @@
+<%= form_with(model: student, local: true) do |form| %>
+  <% if student.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(student.errors.count, "error") %> prohibited this student from being saved:</h2>
+
+      <ul>
+        <% student.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :dob %>
+    <%= form.date_select :dob %>
+  </div>
+
+  <div class="field">
+    <%= form.label :student_ID %>
+    <%= form.number_field :student_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :social_media %>
+    <%= form.email_field :social_media %>
+  </div>
+
+  <div class="field">  
+    <%= form.radio_button(:gender, "male") %>
+    <%= label(:male, "Male") %>
+    <%= form.radio_button(:gender, "female") %>
+    <%= form.label(:femlae, "Female") %>
+  </div>
+
+  <div class="field">
+    <%= form.label :course %>
+    <%= form.select(:course, options_for_select([['Engineering',1],['Journalism', 2],['Fashion Design'],3],2)) %>
+  </div>
+
+  <div class="field">
+    <%= form.label :favourite_color %>
+    <%= form.color_field :color %>
+  </div>
+
+  <div class="field">
+    <%= form.label :profile_password %>
+    <%= form.password_field :profile_pass %>
+  </div>
+
+  <div class="field">
+    <%= form.label :agreement %>
+    <%= form.check_box :agreement %> I agree to disagree
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

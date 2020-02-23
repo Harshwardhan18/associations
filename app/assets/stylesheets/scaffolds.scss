@@ -1,6 +1,6 @@
 body {
   background-color: #fff;
-  color: rgb(100, 96, 96)
+  color: #333;
   // margin: 33px; 
 }
 
@@ -15,20 +15,20 @@ pre {
   font-size: 11px; }
 
 // a {
-//   color: rgb(231, 10, 10); }
+//   color: #000; }
 
 // a:visited {
-//   color: rgb(228, 20, 20); }
+//   color: #666; }
 
 // a:hover {
-//   color: rgb(201, 64, 64);
+//   color: #fff;
 //   background-color: #000; }
 
-// th {
-//   padding-bottom: 5px; }
+th {
+  padding-bottom: 5px; }
 
-// td {
-//   padding: 0 5px 7px; }
+td {
+  padding: 0 5px 7px; }
 
 div.field,
 div.actions {
@@ -63,5 +63,4 @@ div.actions {
   list-style: square; }
 
 label {
-  display: block; 
-}
+  display: block; }
