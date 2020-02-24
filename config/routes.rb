@@ -3,6 +3,9 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   root 'companies#index'
 
+  get '/calculators/calc' => 'calculators#calc', as: 'calc'
+  resources :calculators
+
   resources :authors, except: [:edit, :update] do
     resources :books, except: [:edit, :update]
   end
