@@ -3,14 +3,19 @@ class StudentsController < ApplicationController
 
   # GET /students
   # GET /students.json
-  def index
+  def index 
     @students = Student.all
-    # format.xml  { render xml: @students }
+    respond_to do |format|
+      format.html # index.html.erb
+      format.xml  { render xml: @students.as_json }
+      format.json  { render json: @students }
+    end
   end
 
   # GET /students/1
   # GET /students/1.json
   def show
+
   end
 
   # GET /students/new
@@ -31,6 +36,7 @@ class StudentsController < ApplicationController
       if @student.save
         format.html { redirect_to @student, notice: 'Student was successfully created.' }
         format.json { render :show, status: :created, location: @student }
+        format.xml  { render :show }
       else
         format.html { render :new }
         format.json { render json: @student.errors, status: :unprocessable_entity }
