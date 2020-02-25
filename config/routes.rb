@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   root 'companies#index'
 
   get '/calculators/calc' => 'calculators#calc', as: 'calc'
+  get '/calculators/mean' => 'calculators#mean', as: 'mean'
+  get '/calculators/median' => 'calculators#median', as: 'median'
   resources :calculators
 
   resources :authors, except: [:edit, :update] do

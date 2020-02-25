@@ -19,3 +19,28 @@
 <% unless @res.nil? %>
   <p> = <%= @res %> </p>
 <% end %>
+<br>
+<hr>
+<br>
+<%= form_for :calculator, url: { action: :mean }, method: :get do |f|   %>
+  <%= text_field_tag :m, params[:m] %>
+  <%= f.submit 'Mean!' %>
+<% end %>
+
+<% unless @resM.nil? %>
+  <p> = <%= @resM %> </p>
+<% end %>
+<br>
+<hr>
+<br>
+<%= form_for :calculator, url: { action: :median }, method: :get do |f|   %>
+  <%= text_field_tag :me, params[:me] %>
+  <%= f.submit 'Median!' %>
+<% end %>
+
+<% unless @resMe.nil? %>
+  <p> = <%= @resMe %> </p>
+<% end %>
+<br>
+<hr>
+<br>
