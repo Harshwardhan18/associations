@@ -44,3 +44,11 @@
 <br>
 <hr>
 <br>
+<%= form_for :calculator, url: { action: :mode }, method: :get do |f|   %>
+  <%= text_field_tag :mo, params[:mo] %>
+  <%= f.submit 'Mode!' %>
+<% end %>
+
+<% unless @resMo.nil? %>
+  <p> = <%= @resMo %> </p>
+<% end %>

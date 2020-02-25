@@ -21,4 +21,9 @@ class CalculatorsController < ApplicationController
       @resMe = Calculator.median(*params[:me].split)
       render :index
     end
+
+    def mode
+      @resMo = Calculator.mode(*params[:mo].split)
+      render :index
+    end
 end

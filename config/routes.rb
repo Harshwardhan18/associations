@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   get '/calculators/calc' => 'calculators#calc', as: 'calc'
   get '/calculators/mean' => 'calculators#mean', as: 'mean'
   get '/calculators/median' => 'calculators#median', as: 'median'
+  get '/calculators/mode' => 'calculators#mode', as: 'mode'
+  
   resources :calculators
 
   resources :authors, except: [:edit, :update] do
