@@ -1,0 +1,11 @@
+<h1>Files</h1>
+<br>
+<br>
+<%= @file %>
+<hr>
+<h1>Editing the files</h1>
+<%= form_tag editFile_path, method: :get do |f|   %>
+  <%= text_area_tag(:data, @file, class: 'form-control') %>
+    <br>
+  <%= submit_tag('Edit File!', class:'btn btn-primary') %>
+<% end %>

@@ -9,7 +9,9 @@ Rails.application.routes.draw do
   get '/calculators/mode' => 'calculators#mode', as: 'mode'
   
   resources :calculators
-
+  get '/files/editFile' => 'files#editFile', as: 'editFile'
+  resources :files
+  
   resources :authors, except: [:edit, :update] do
     resources :books, except: [:edit, :update]
   end
