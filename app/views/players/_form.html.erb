@@ -1,0 +1,18 @@
+<%= form_for :player, :html => {id:'players'} do |form| %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :goal %>
+    <%= form.number_field :goal %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
+
+<div id='player-data'></div>

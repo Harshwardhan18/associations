@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Customers</h1>
+
+<table id='customers'>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <%= render @customers %>
+  </tbody>
+</table>
+
+<br>
+<div id="new-customer">
+<%= link_to 'New Customer', new_customer_path, remote:true %>
+</div>
